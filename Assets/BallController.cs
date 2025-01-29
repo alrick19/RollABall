@@ -8,21 +8,8 @@ public class BallController : MonoBehaviour
     [SerializeField] private float ballSpeed = 1.1f;
     
     public void MoveBall(Vector2 input)
-    {
+    {   
         Vector3 inputXZPlane = new(input.x, 0, input.y);
         sphereRigidbody.AddForce(inputXZPlane * ballSpeed);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-        // Vector3 inputXZPlane = new Vector3(inputVector.x, 0, inputVector.y);
-        // sphereRigidbody.AddForce(inputXZPlane * ballSpeed);
-
-
-        // Debug.Log("Resultant Vector: " + inputVector);
-        // Debug.Log("Resultant 3D Vector " + inputXZPlane  * ballSpeed);
     }
 }
