@@ -5,12 +5,6 @@ public class InputManager : MonoBehaviour
 {
     public UnityEvent<Vector2> OnMove = new UnityEvent<Vector2>();
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -31,6 +25,7 @@ public class InputManager : MonoBehaviour
         {
         inputVector += Vector2.right;
         }
+        
 
         OnMove?.Invoke(inputVector);
     }
